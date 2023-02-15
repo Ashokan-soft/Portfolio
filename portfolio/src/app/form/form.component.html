@@ -1,0 +1,168 @@
+<div class="container overall">
+    <h1>Enter Your Information</h1><br>
+    <pre></pre>
+    <form #f="ngForm" name="Form">
+
+        <div class="row" name="f">
+            <!-- row1 name field -->
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <!-- name field -->
+                <label>FirstName</label><br>
+
+                <input type="text" placeholder="Ex:Ashok" class="form-control" [(ngModel)]="FName" #FirstName="ngModel"
+                    name="FirstName" minlength="2" required
+                    [ngClass]="{ 'is-invalid': f.submitted && FirstName.invalid }">
+
+                <small *ngIf="FirstName.touched && FirstName.errors?.required">Must you fill your Name</small>
+                <small *ngIf="FirstName.touched && FirstName.errors?.minlength"> First Name Too short</small>
+                <small *ngIf="f.submitted && FirstName.errors?.required">Must you fill Name</small>
+
+            </div>
+
+            <div class="col-lg-6  col-md-6 col-sm-12">
+                <label>Last Name</label>
+                <input type="text" placeholder="Ex:Kumar" class="form-control" [(ngModel)]="LName" name="LastName"
+                    #LastName="ngModel">
+            </div>
+        </div>
+        <br>
+        <!-- Age && Gender -->
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <!-- Age -->
+                <label for=""> Age:</label>
+                <input type="number" class="form-control" [(ngModel)]="age" name="Age" #Age="ngModel" required
+                    maxlength="2" [ngClass]="{'is-invalid':f.submitted && Age.invalid}">
+                <small *ngIf="age<18">Must above 18+</small>
+                <small *ngIf="age>90">Must Below 90</small>
+                <small *ngIf="Age.touched && Age.errors?.required">Age is Manatory Field</small>
+            </div>
+
+            <!-- Gender with Radio -->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <label for="">Select your Gender</label>
+                <br>
+
+                <div class="form-check">
+
+                    <input type="radio" class="form-check-input" name="Gender" value="male" [(ngModel)]="gender"
+                        #Gender="ngModel" required>
+                    <label class="form-check-label">Male</label>
+
+                </div>
+
+                <div class="form-check">
+
+                    <input type="radio" class="form-check-input" name="Gender" value="Female" [(ngModel)]="gender"
+                        #Gender="ngModel" required>
+                    <label class="form-check-label">Female</label>
+
+                </div>
+                <div class="form-check">
+
+                    <input type="radio" class="form-check-input" name="Gender" value="Other" [(ngModel)]="gender"
+                        #Gender="ngModel" required>
+                    <label class="form-check-label">Others</label><br>
+                    <small *ngIf="f.submitted&& Gender.errors?.required">Select any one</small>
+                    
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <br>
+        <!-- Department &&  -->
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+
+                <label for="">Department</label>
+                <select name="Department" #Department="ngModel" id="" class="form-control" [(ngModel)]="department" 
+                        [ngClass]="{'is-invalid':f.submitted && Department.invalid}" required>
+
+                    <option value=""></option>
+                    <option value="It_(Information Tech)">It_(Information Tech)</option>
+                    <option value="Accounts">Accounts</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Deplomo CNC">Deplomo CNC</option>
+                    <option value="Fasion Tech">Fasion Tech</option>
+                    <option value="YouTuber">YouTuber</option>
+                    <option value="Freelance Worker">Freelance Worker</option>
+                    
+
+                </select>
+                
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <label for=""> Working location preference</label>
+                    <div class="form-check">
+                        
+                        <input type="checkbox"class="form-check-input" value="coimbatore">
+                        <label for="" class="form-check-label">coimbatore</label>
+                    </div>
+                    <div class="form-check">    
+                        <input type="checkbox"class="form-check-input"value="bangalore">
+                        <label for="" class="form-check-label">Bangalore</label>
+                    </div>
+                
+                    <div class="form-check">    
+                        <input type="checkbox"class="form-check-input"value="chennai">
+                        <label for="" class="form-check-label">Chennai</label>
+                    </div>
+                    <div class="form-check">    
+                        <input type="checkbox"class="form-check-input"value="Flexible">
+                        <label for="" class="form-check-label">Flexible</label>
+                    </div>
+                
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <label for="">Emali</label>
+                <input class="form-control" type="email"[(ngModel)]="email" name="Email" #Email="ngModel" validateEmail="true"
+                required [ngClass]="{'is-invalid':f.submitted && Email.invalid}" email="true" placeholder="Ex:Ashok@gmail.com"> 
+                <small *ngIf="Email.touched  && Email.errors?.email"> Must fill valid Email</small>
+                <!-- <small *ngIf="Email.touched"> Must fill Email</small> -->
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <label for="">Phone Number</label>
+                <input type="text" class="form-control" minlength="10" maxlength="10" [(ngModel)]="phoneNumber" 
+                name="PhoneNumber" #PhoneNumber="ngModel"[ngClass]="{'is-invalid':f.submitted && PhoneNumber.invalid}"placeholder="without +91 only 10digit" required 
+                pattern=(^[0-9]*$)>
+                <small *ngIf="PhoneNumber.touched && PhoneNumber.errors?.required">Mobile number must 10 digits</small>               
+                <small *ngIf="PhoneNumber.touched && PhoneNumber.errors?.pattern ">Enter only Number</small>               
+            </div>
+        </div>
+        <br>
+    <div class="row">
+        <Label> Password Fields</Label>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <label for="">Enter password</label>
+            <input type="password"class="form-control" name="Password" #Password="ngModel" [(ngModel)]="password" [ngClass]="{'is-invalid':f.submitted && Password.invalid}"minlength="6" required>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <label for="">Confrim Password</label>
+
+            <input type="password" class="form-control" name="Cpass" #Cpass="ngModel" [(ngModel)]="ConfrimPass" minlength="6">
+            <small *ngIf="f.submitted && password != ConfrimPass">Password Not Match</small> 
+        </div>
+    </div>    
+
+
+
+
+
+
+
+
+
+
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
