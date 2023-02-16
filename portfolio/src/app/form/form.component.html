@@ -75,6 +75,22 @@
 
         </div>
         <br>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 date">
+                
+                <label for="">Date Of Birth</label>
+                <input type="date" class="form-control" name="DOB" #DOB="ngModel" [(ngModel)]="dob"
+                [ngClass]="{'is-invalid':f.submitted && DOB.invalid }" required>
+                <small *ngIf="DOB.touched && DOB.errors?.required"> plese select your DOB</small>
+                <!-- <small *ngIf="dob."></small> -->
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+
+            </div>
+
+        </div>
+        <br>
         <!-- Department &&  -->
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">
