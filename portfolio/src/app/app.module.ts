@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     ProfileComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
