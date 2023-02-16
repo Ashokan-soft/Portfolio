@@ -54,8 +54,8 @@
 
                 <div class="form-check">
 
-                    <input type="radio" class="form-check-input" name="Gender" value="Female" [(ngModel)]="gender"
-                        #Gender="ngModel" required>
+                    <input type="radio" class="form-check-input" name="Gender" value="Female" [(ngModel)]="gender"#Gender="ngModel" required>
+                    
                     <label class="form-check-label">Female</label>
 
                 </div>
@@ -65,7 +65,7 @@
                         #Gender="ngModel" required>
                     <label class="form-check-label">Others</label><br>
                     <small *ngIf="f.submitted&& Gender.errors?.required">Select any one</small>
-                    
+
 
                 </div>
 
@@ -80,8 +80,8 @@
             <div class="col-lg-6 col-md-6 col-sm-12">
 
                 <label for="">Department</label>
-                <select name="Department" #Department="ngModel" id="" class="form-control" [(ngModel)]="department" 
-                        [ngClass]="{'is-invalid':f.submitted && Department.invalid}" required>
+                <select name="Department" #Department="ngModel" id="" class="form-control" [(ngModel)]="department"
+                    [ngClass]="{'is-invalid':f.submitted && Department.invalid}" required>
 
                     <option value=""></option>
                     <option value="It_(Information Tech)">It_(Information Tech)</option>
@@ -91,66 +91,72 @@
                     <option value="Fasion Tech">Fasion Tech</option>
                     <option value="YouTuber">YouTuber</option>
                     <option value="Freelance Worker">Freelance Worker</option>
-                    
+
 
                 </select>
-                
+
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <label for=""> Working location preference</label>
-                    <div class="form-check">
-                        
-                        <input type="checkbox"class="form-check-input" value="coimbatore">
-                        <label for="" class="form-check-label">coimbatore</label>
-                    </div>
-                    <div class="form-check">    
-                        <input type="checkbox"class="form-check-input"value="bangalore">
-                        <label for="" class="form-check-label">Bangalore</label>
-                    </div>
-                
-                    <div class="form-check">    
-                        <input type="checkbox"class="form-check-input"value="chennai">
-                        <label for="" class="form-check-label">Chennai</label>
-                    </div>
-                    <div class="form-check">    
-                        <input type="checkbox"class="form-check-input"value="Flexible">
-                        <label for="" class="form-check-label">Flexible</label>
-                    </div>
-                
+
+                <div class="form-check">
+
+                    <input type="checkbox" class="form-check-input" value="coimbatore"  name="Work" ngModel #Work="ngModel" [(ngModel)]="work" checked="false">
+                    
+                    <label for="" class="form-check-label">coimbatore</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" value="bangalore" name="Work" ngModel #Work="ngModel" [(ngModel)]="work" checked="false">
+                    <label for="" class="form-check-label">Bangalore</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" value="chennai" name="Work" ngModel #Work="ngModel" [(ngModel)]="work"checked="false">
+                    <label for="" class="form-check-label">Chennai</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" value="Flexible" name="Work" ngModel #Work="ngModel" [(ngModel)]="work" checked="false">
+                    <label for="" class="form-check-label">Flexible</label>
+                </div>
+
             </div>
         </div>
         <br>
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <label for="">Emali</label>
-                <input class="form-control" type="email"[(ngModel)]="email" name="Email" #Email="ngModel" validateEmail="true"
-                required [ngClass]="{'is-invalid':f.submitted && Email.invalid}" email="true" placeholder="Ex:Ashok@gmail.com"> 
+                <input class="form-control" type="email" [(ngModel)]="email" name="Email" #Email="ngModel"
+                    validateEmail="true" required [ngClass]="{'is-invalid':f.submitted && Email.invalid}" email="true"
+                    placeholder="Ex:Ashok@gmail.com">
                 <small *ngIf="Email.touched  && Email.errors?.email"> Must fill valid Email</small>
                 <!-- <small *ngIf="Email.touched"> Must fill Email</small> -->
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <label for="">Phone Number</label>
-                <input type="text" class="form-control" minlength="10" maxlength="10" [(ngModel)]="phoneNumber" 
-                name="PhoneNumber" #PhoneNumber="ngModel"[ngClass]="{'is-invalid':f.submitted && PhoneNumber.invalid}"placeholder="without +91 only 10digit" required 
-                pattern=(^[0-9]*$)>
-                <small *ngIf="PhoneNumber.touched && PhoneNumber.errors?.required">Mobile number must 10 digits</small>               
-                <small *ngIf="PhoneNumber.touched && PhoneNumber.errors?.pattern ">Enter only Number</small>               
+                <input type="text" class="form-control" minlength="10" maxlength="10" [(ngModel)]="phoneNumber"
+                    name="PhoneNumber" #PhoneNumber="ngModel"
+                    [ngClass]="{'is-invalid':f.submitted && PhoneNumber.invalid}" placeholder="without +91 only 10digit"
+                    required pattern=(^[0-9]*$)>
+                <small *ngIf="PhoneNumber.touched && PhoneNumber.errors?.required">Mobile number must 10 digits</small>
+                <small *ngIf="PhoneNumber.touched && PhoneNumber.errors?.pattern ">Enter only Number</small>
             </div>
         </div>
         <br>
-    <div class="row">
-        <Label> Password Fields</Label>
-        <div class="col-lg-6 col-md-6 col-sm-12">
-            <label for="">Enter password</label>
-            <input type="password"class="form-control" name="Password" #Password="ngModel" [(ngModel)]="password" [ngClass]="{'is-invalid':f.submitted && Password.invalid}"minlength="6" required>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
-            <label for="">Confrim Password</label>
+        <div class="row">
+            <Label> Password Fields</Label>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <label for="">Enter password</label>
+                <input type="password" class="form-control" name="Password" #Password="ngModel" [(ngModel)]="password"
+                    [ngClass]="{'is-invalid':f.submitted && Password.invalid}" minlength="6" required>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <label for="">Confrim Password</label>
 
-            <input type="password" class="form-control" name="Cpass" #Cpass="ngModel" [(ngModel)]="ConfrimPass" minlength="6">
-            <small *ngIf="f.submitted && password != ConfrimPass">Password Not Match</small> 
+                <input type="password" class="form-control" name="Cpass" #Cpass="ngModel" [(ngModel)]="ConfrimPass"
+                    minlength="6">
+                <small *ngIf="f.submitted && password != ConfrimPass">Password Not Match</small>
+            </div>
         </div>
-    </div>    
 
 
 
@@ -162,7 +168,8 @@
 
 
         <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
+        <small>{{successresult}}</small>
     </form>
 
 </div>
