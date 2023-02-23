@@ -1,0 +1,25 @@
+<h1> Don't think am did mistake this is just practice perpose am did some works here</h1>
+
+<h2>Page under development</h2>
+<pre></pre>
+<pre></pre>
+
+<div class="container">
+
+    <form [formGroup]="form2" action="">
+
+        <label for="" class="input-labal">Email</label>
+
+        <input type="email" email="true" class="form-control" formControlName="email" minlength="5" required
+        [ngClass]="{'is-invalid':  Submitted && form2.controls['email'].errors}">
+
+        <label for="" class="input-labal">Password</label>
+
+        <input type="password" formControlName="password" class="form-control"
+            [ngClass]="{'is-invalid':  Submitted && form2.controls['password'].errors}" >
+
+        <button type="submit" class="btn btn-success" (click)="push()"> Submit Button</button>
+
+    </form>
+
+</div>

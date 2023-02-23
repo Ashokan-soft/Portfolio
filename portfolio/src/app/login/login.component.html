@@ -1,0 +1,55 @@
+
+<img src="/assets/giffs/2825704.gif" alt="" >
+<pre></pre>
+<pre></pre>
+<div  class="container">
+
+<div class="row ">
+    <div class="col-sm-2 col-md-3 col-lg-6">
+        
+    </div>
+    
+    <div class="col-sm-8 col-md-6 col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                
+                <form [formGroup]="form1" action="" >
+                    <div class="form-group">
+                        <h1>Login Form : </h1>
+                        <br>
+
+                        <label for="" class="label">Email</label><br>
+                        <input type="email"class="form-control" formControlName="email"
+                        [ngClass]="{'is-invalid':  submitted && form1.controls['email'].errors}"  email="true" >
+                        <br>
+                        <label for="" class="label">Password</label><br>
+                        <input type="password" class="form-control" formControlName="password">
+
+                        <div *ngIf="form1.controls['password'].errors?.required" ></div>
+                        <pre></pre>
+
+<br>                        <a href="">Forgot password</a>
+                        <pre></pre>
+<br><br>                <div class="bttn">
+
+    <button class="btn btn-success" type="submit" (click)="Reg()" > Login</button>
+                        </div>
+
+
+
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-sm-2 col-md-3 col-lg-0">
+
+    </div>
+
+</div>
+</div>
