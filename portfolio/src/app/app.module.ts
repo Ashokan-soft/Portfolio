@@ -14,6 +14,7 @@ import { WorksComponent } from './works/works.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { RformsComponent } from './rforms/rforms.component';
+import { ListViewComponent } from './list-view/list-view.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { RformsComponent } from './rforms/rforms.component';
     ContactComponent,
     LoginComponent,
     RformsComponent,
+    ListViewComponent,
    
   ],
   imports: [

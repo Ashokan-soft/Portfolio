@@ -10,6 +10,7 @@ export class ContactComponent implements OnInit {
   email:any="ashokansoft@gmail.com"
   password:any="Ashok"
   
+  
   Submitted:boolean=false
 
   push() { 
