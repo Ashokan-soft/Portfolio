@@ -17,9 +17,10 @@
 
                     <small class="text-danger" *ngIf="submitted && rform.controls['fname'].errors?.required">First Name
                         Required </small>
-
+<!-- you want to use this restistion less code just Go To tsconfig.json 
+in that nopropertyAccessFromIndexSing you want make false -->
                     <small class="text-danger"
-                        *ngIf="rform.controls['fname'].touched && rform.controls['fname'].errors?.minlength">Minmum
+                        *ngIf="rform.controls['fname'].errors?.minlength">Minmum
                         length is 3</small>
 
 
