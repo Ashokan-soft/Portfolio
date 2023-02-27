@@ -1,0 +1,120 @@
+.disp
+{
+    background-color:transparent;
+
+    height: 30px;
+    width: 180px;
+    border-radius: 5px;
+    border: 3px;
+    border-color: rgb(71, 149, 221);
+    color: rgb(243, 239, 239);
+}
+.txtbox
+{
+    text-align: right;
+    margin-bottom: 10%;
+    // margin-top: -1px;
+    border-color: rgb(71, 149, 221);
+    background-color: transparent;
+    color: aliceblue;
+    border-radius: 5px;
+    // margin: 1px;
+    // direction: rtl;
+    // color: rgb(37, 37, 239);
+    // text-size-adjust: small;
+    // font-size: 10px;
+    height: 30px;
+    width: 180px;
+}
+.cal
+{
+    
+    // margin-top:10% ;
+    background-color: rgb(0, 0, 0);
+    width: fit-content;
+    padding: 20px;
+    // margin: 10%;
+    border-radius: 10px;
+    // position:absolute;
+    color: aliceblue;
+}
+.nbtn,.btn,.btn-primary,.btn-dark{
+
+background-color: black;
+    border-radius: 0px;
+}
+.one
+{
+    
+    margin-top:5% ;
+    // background-color: rgb(27, 79, 225);
+    width: fit-content;
+    padding: 10px;
+    // padding-top:1px;
+    // margin: 10%;
+    border-radius: 10px;
+    background:linear-gradient(90deg,
+
+    rgb(226, 22, 22) 0%,
+    rgb(255, 128, 0) 10%,
+    rgb(255, 162, 0) 20%,
+    rgb(43, 255, 0) 30%,
+    rgb(0, 255, 115) 40%,
+    rgb(0, 255, 234) 50%,
+    rgb(0, 162, 255) 60%,
+    rgb(0, 34, 255) 70%,
+    rgb(217, 0, 255) 80%,
+    rgb(255, 0, 204) 90%,
+    );
+    background-size:(200% 200%);
+    animation: anime 2s infinite;
+}
+@keyframes anime {
+    100%{
+        background-position-x: -200%;
+    }
+
+    
+};
+
+.btn
+{
+    margin: 1px;
+    // border: 2px;
+}
+.obtn
+{
+    width:70px;
+}
+h1{
+    opacity: 90%;
+    font-size: medium;
+
+}
+.solor{
+    background-color: rgb(71, 4, 4);
+    height: 23px;
+    width: 80px;
+    float: right;
+    border-radius: 5px;
+    // align-items: center;
+    // text-align: center;
+    // padding-left: 20px;
+
+    // position: relative;
+    // top: 17%;
+    // left: 282px;
+    opacity: 80%;
+}
+// input{direction: rtl;}
+td
+{
+    background-color: red;
+    height: 3vh;
+    width: 11px;
+    opacity: 90%;
+    border-radius: 3px;
+    border: solid 2px transparent;
+    margin-top:100px;
+    
+}

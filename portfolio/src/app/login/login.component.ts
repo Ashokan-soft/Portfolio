@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     //this.submitted = false;
     if(this.form1.controls['email'].value == this.un && this.form1.controls['password'].value == this.pwd)
     {
-      this.router.navigate(['/','works'])
+      this.router.navigate(['/','rforms'])
     }
     else
     {

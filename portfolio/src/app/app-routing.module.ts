@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ListViewComponent } from './list-view/list-view.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
+import { RcalculatorComponent } from './rcalculator/rcalculator.component';
 import { RformsComponent } from './rforms/rforms.component';
 import { WorksComponent } from './works/works.component';
 
@@ -20,7 +21,8 @@ const routes: Routes = [
   {path:'works',component:WorksComponent},
   {path:'login',component:LoginComponent},
   {path:'listview',component:ListViewComponent},
-  {path:'rforms',component:RformsComponent}
+  {path:'rforms',component:RformsComponent},
+  {path:'Rcalculator',component:RcalculatorComponent},
 ];
 
 @NgModule({

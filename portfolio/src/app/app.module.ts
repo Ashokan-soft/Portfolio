@@ -15,6 +15,7 @@ import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
 import { RformsComponent } from './rforms/rforms.component';
 import { ListViewComponent } from './list-view/list-view.component';
+import { RcalculatorComponent } from './rcalculator/rcalculator.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ListViewComponent } from './list-view/list-view.component';
     LoginComponent,
     RformsComponent,
     ListViewComponent,
+    RcalculatorComponent,
    
   ],
   imports: [

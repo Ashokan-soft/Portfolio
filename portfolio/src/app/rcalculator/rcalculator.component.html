@@ -1,0 +1,70 @@
+
+<div class=" one container">
+
+    <div class=" cal container">
+    
+      <h1>CALCULATOR
+    
+        <div class="solor"> 
+          <table>
+           <marquee behavior="" direction="right">
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+           </marquee>
+          
+          </table>
+        </div>
+      </h1>
+    
+      <br>
+    
+      <div class="disp">{{output}} </div>
+    
+      <br>
+      <form action="">
+        
+        <input type="text" class="txtbox" value={{Result}}>
+        
+      </form>
+      <br>
+    
+      <div class="nbtn">
+        <button class="nbtn btn btn-primary" id="btn" (click)="push(1)">1</button>
+        <button class="nbtn btn btn-primary" id="btn" (click)="push(2)">2</button>
+        <button class="nbtn btn btn-primary" id="btn" (click)="push(3)">3</button>
+    
+        <button class="obtn btn btn-primary" (click)="clear()">AC</button><br>
+    
+        <button class="nbtn btn btn-primary" id="btn" (click)="push(4)">4</button>
+        <button class="nbtn btn btn-primary" id="btn" (click)="push(5)">5</button>
+        <button class="nbtn btn btn-primary" id="btn" (click)="push(6)">6</button>
+    
+        <button class="obtn btn btn-primary" (click)="op('+')">+</button><br>
+    
+        <button class="nbtn btn btn-primary" id="btn" (click)="push(7)">7</button>
+        <button class="nbtn btn btn-primary" id="btn" (click)="push(8)">8</button>
+        <button class="nbtn btn btn-primary" id="btn" (click)="push(9)">9</button>
+    
+        <button class="obtn btn btn-primary" (click)="op('-')">-</button><br>
+    
+        <button class="nbtn btn btn-primary" (click)="push(0)">0</button>
+    
+        <button class="obtn btn btn-primary" (click)="op('*')">X</button>
+        <button class="obtn btn btn-primary" (click)="op('/')">/</button><br>
+        <button class="obtn btn btn-primary" (click)="op('%')">%</button>
+        <button class="obtn btn btn-success" style="width: 106px;" (click)="Equals()">=</button>
+      </div>
+    
+    
+    
+    </div>
+    </div>

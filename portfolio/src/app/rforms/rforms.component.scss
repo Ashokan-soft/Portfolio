@@ -1,13 +1,28 @@
 .inside-form{
-    margin: 10%;
-    padding: 10%;
+    margin-top: 10%;
+    padding: 6%;
     // background-color: rgb(41, 40, 40);
     // color: whitesmoke;
-    // border-radius: -13px;
-    border: solid 1px black;
+    border-radius: 6px;
+    // border: solid 1px black;
+    // background-color: blue;
+    background: linear-gradient(80deg, #5f03ff,#000000);
+    color: #fbfbfbd6 ;
+    
 
 }
 .form-control,.form-check-input,.form-select{
+    // margin: 1px;
 
     // border: solid 0.5px ;
+    // background-color: transparent;
+
+}
+
+.is-invalid{
+    border-color: red;
+    // color:yellowgreen;
+
+    
+
 }

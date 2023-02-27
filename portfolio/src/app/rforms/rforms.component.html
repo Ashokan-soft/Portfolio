@@ -1,7 +1,9 @@
-<h1>Reactive Form </h1>
 <div class="container">
-
-
+    
+    
+    <h1>Reactive Form </h1>
+    <h5>Am validated everything just check in console page</h5>
+    
     <form action="" [formGroup]="rform">
         <div class="inside-form">
             <!-- row 1--------------------------------------------------------------- -->
@@ -69,7 +71,7 @@
                     <div *ngFor="let y of Gender">
 
                         <label>
-                            <input type="radio" name="gender" value="{{y}}" formControlName="gender"
+                            <input type="radio" class="form-check-input" name="gender" value="{{y}}"  formControlName="gender"
                                 (change)="gchenge($event)" />
                             {{ y }}
                         </label>
@@ -84,21 +86,10 @@
 
                     <h6>Skills</h6>
                     <div class="form-check">
-                        <!-- <input type="checkbox" class="form-check-input" formControlName="skills" value="Web">
-                    <label for="" class="form-check-label">Web Development </label>
-
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input"formControlName="skills" value="App">
-                    <label for="" class="form-check-label">App Development</label>
-
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input"formControlName="skills" value="Software">
-                    <label for="" class="form-check-label">Software Development </label> -->
+                     
                         <div *ngFor="let x of skills">
                             <label>
-                                <input type="checkbox" [value]='x' (change)="whenClick($event)" />
+                                <input class="form-check-input" type="checkbox" [value]='x' (change)="whenClick($event)" />
                                 {{ x }}
 
                             </label>
@@ -115,7 +106,8 @@
             <div class="row">
                 <div class="col">
                     <h6>Qualification</h6>
-                    <select class="form-select" formControlName="qualificaton" (change)="qselect($event)">
+                    <select class="form-select" formControlName="qualification" (change)="qselect($event)" 
+                    [ngClass]="{'is-invalid':submitted && rform.controls['qualification'].errors}">
 
                         <option value="">select one </option>
                         <option *ngFor="let x of qualifi" [value]="x"> {{x}} </option>
@@ -136,7 +128,8 @@
                     <!-- <option value="-1" disabled>Select List</option> -->
                     <!-- <option *ngFor="let x of list">{{x}}</option> -->
 
-                    <select class="form-select" formControlName="specialization" (change)="Sselect($event)">
+                    <select class="form-select" formControlName="specialization" (change)="Sselect($event)"
+                    [ngClass]="{'is-invalid':submitted && rform.controls['specialization'].errors}">
 
                         <option value="">Select Any one</option>
 
@@ -179,7 +172,7 @@
 
                 </div>
                 <div class="col">
-                    <label for="">Phone Number</label>
+                    <label for="">Phone</label>
                     <input type="text" maxlength="10" class="form-control" formControlName="phoneNum"
                         (keypress)="keyPressNumbers($event)"
                         [ngClass]="{'is-invalid':submitted && rform.controls['phoneNum'].errors}">
@@ -198,17 +191,24 @@
                 </div>
 
             </div>
-            pasword row--------------------------------------------------------------------------------------------- -->
+            <!-- pasword row--------------------------------------------------------------------------------------------- -->
 
             <div class="row">
                 <div class="col">
-                    <label for="" formControlName="Password">Password</label>
-                    <input type="password">
+                    <label >Password</label>
+                    <input class ="form-control" type="password" formControlName="Password"
+                     [ngClass]="{'is-invalid':submitted && rform.controls['Password'].errors?.required}">
+
+
+                    <small class="text-danger" *ngIf=" submitted && rform.controls['Password'].invalid" >Enter Password</small>&nbsp;
+                    <small class="text-danger" *ngIf=" submitted && rform.controls['Password'].errors?.minlength" >Minimum 6 values</small>
                     
                 </div>
                 <div class="col">
-                    <label for=""formControlName="CPassword">ConfrimPassword</label>
-                    <input type="password">
+                    <label>ConfrimPassword</label>
+                    <input type="password"class ="form-control" formControlName="CPassword">
+
+                    <small  class="text-danger" *ngIf="rform.controls['CPassword'].value != rform.controls['Password'].value">Password Not Match</small>
 
                 </div>
 
@@ -220,7 +220,7 @@
 
 
 
-            <!-- submit button row------------------------------------------------------- -->
+            <!-- submit button row------------------------------------------------------- --> <pre></pre>
             <div class="row">
                 <div class="col">
                     <button type="submit" class="btn btn-success" (click)="sub()">Submit</button>
