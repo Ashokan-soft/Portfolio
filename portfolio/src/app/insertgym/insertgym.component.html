@@ -1,0 +1,146 @@
+<br>
+<br>
+
+<div class="container">
+
+
+    <form [formGroup]="FormPost">
+        <!--  company ,AssName,User Name---------------------------------------------------------------------------------------------->
+
+        <div class="row">
+
+            <div class="col ">
+                <label for="">
+                    <h6>Gym Id </h6>
+                </label>
+                <input type="text" class="form-control" formControlName="gym_Id" placeholder="Enter Gym_id"
+                    [ngClass]="{'is-invalid':submitted && FormPost.controls['gym_Id'].errors}"
+                    (keypress)="keyPressNumbers($event)">
+
+                <small class="text-danger" *ngIf="submitted && FormPost.controls['gym_Id'].errors?.required">
+                   Gym id Required</small>
+
+
+            </div>
+            <div class="col ">
+                <label for="">
+                    <h6>Bank Id </h6>
+                </label>
+                <input type="text" class="form-control" formControlName="Bank_Id" placeholder="Enter Bank Id"
+                    (keypress)="keyPressNumbers($event)"
+                    [ngClass]="{'is-invalid':submitted && FormPost.controls['Bank_Id'].errors}">
+
+                <small class="text-danger" *ngIf="submitted && FormPost.controls['Bank_Id'].errors?.required">
+                   Bank Id Required</small>
+
+            </div>
+            <div class="col ">
+                <label for="">
+                    <h6>Account No </h6>
+                </label>
+                <input type="number" class="form-control" formControlName="AccountNO" placeholder="Enter Account Number"
+                    (keypress)="keyPressNumbers($event)"
+                    [ngClass]="{'is-invalid':submitted && FormPost.controls['AccountNO'].errors}">
+
+                    <small class="text-danger" *ngIf="submitted && FormPost.controls['AccountNO'].errors?.required">
+                       Account No  Required</small>
+
+    
+            </div>
+
+        </div>
+        <br>
+        <div class="row">
+
+            <div class="col ">
+                <label for="">
+                    <h6>IFSC Code</h6>
+                </label>
+                <input type="text" class="form-control" formControlName="IFSC" placeholder="Enter IFSC "
+                    [ngClass]="{'is-invalid':submitted && FormPost.controls['IFSC'].errors}">
+
+                <small class="text-danger" *ngIf=" submitted && FormPost.controls['IFSC'].errors"> IFSC Code Required</small>
+
+            </div>
+            <div class="col ">
+                <label for="">
+                    <h6>Branch</h6>
+                </label>
+                <input type="text" class="form-control" formControlName="Branch" placeholder="Enter Branch"
+                    [ngClass]="{'is-invalid':submitted && FormPost.controls['Branch'].errors}">
+
+                    <small class="text-danger" *ngIf="submitted && FormPost.controls['Branch'].errors?.required">
+                        Enter Bank Branch</small>
+    
+            </div>
+            <div class="col ">
+
+
+                <label for="">
+                    <h6>Bank Name</h6>
+                </label>
+                <input type="text" class="form-control" formControlName="BankName" placeholder="Enter Bank Name"
+                    [ngClass]="{'is-invalid':submitted && FormPost.controls['BankName'].errors}">
+
+                    <small class="text-danger" *ngIf="submitted && FormPost.controls['BankName'].errors?.required">
+                         Bank name Required</small>
+    
+            </div>
+
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col">
+
+                <label for="">
+                    <h6>Account Type</h6>
+                </label>
+
+                <select name="" id="" (change)="TypeSelect($event)" class="form-select input-field"
+                    formControlName="Type" [ngClass]="{'is-invalid':submitted && FormPost.controls['Type'].errors}">
+
+                    <option value="">select any one</option>
+
+                    <option *ngFor="let x of types">{{x}}</option>
+
+                </select>
+
+                <small class="text-danger" *ngIf="submitted && FormPost.controls['Type'].errors?.required">
+                  Select any one  Required</small>
+
+            </div>
+
+            <div class="col">
+                <div class="col ">
+                    <label for="">
+                        <h6>Created By Code</h6>
+                    </label>
+                    <input type="number" class="form-control" formControlName="Credit"
+                        placeholder="Enter Created Id Like 1,2, (etc)" [ngClass]="{'is-invalid':submitted && FormPost.controls['Credit'].errors}">
+
+                        <small class="text-danger" *ngIf="submitted && FormPost.controls['Credit'].errors?.required">
+                            Give created code like 1 ,2, 3</small>
+        
+                </div>
+            </div>
+
+            <div class="col">
+
+            </div>
+
+        </div>
+        <pre></pre>
+        <pre></pre>
+
+        <button type="submit" class="btn btn-success save" (click)="AddAccount()">SAVE</button>
+
+        <button routerLink="/viewgym" class="btn btn-primary" style="margin-left:20px;">Added Information</button>
+
+
+
+
+
+
+    </form>
+</div>

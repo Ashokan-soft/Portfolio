@@ -4,11 +4,13 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
+import { InsertgymComponent } from './insertgym/insertgym.component';
 import { ListViewComponent } from './list-view/list-view.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RcalculatorComponent } from './rcalculator/rcalculator.component';
 import { RformsComponent } from './rforms/rforms.component';
+import { ViewgymComponent } from './viewgym/viewgym.component';
 import { WorksComponent } from './works/works.component';
 
 const routes: Routes = [
@@ -23,6 +25,8 @@ const routes: Routes = [
   {path:'listview',component:ListViewComponent},
   {path:'rforms',component:RformsComponent},
   {path:'Rcalculator',component:RcalculatorComponent},
+  {path:'viewgym',component:ViewgymComponent},
+  {path:'insertgym',component:InsertgymComponent},
 ];
 
 @NgModule({

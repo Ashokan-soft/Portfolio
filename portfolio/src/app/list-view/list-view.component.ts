@@ -10,6 +10,7 @@ export class ListViewComponent implements OnInit {
 constructor(){}
 
  list = ["test","test1","test"]
+ 
  json = [{"name":"Ashok", "city":"CBE"},{"name":"XXX", "city":"TRP"},{"name":"YYY", "city":"SALEM"},{"name":"SSS", "city":"London"}]
 
   ngOnInit(): void {

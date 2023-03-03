@@ -16,6 +16,9 @@ import { LoginComponent } from './login/login.component';
 import { RformsComponent } from './rforms/rforms.component';
 import { ListViewComponent } from './list-view/list-view.component';
 import { RcalculatorComponent } from './rcalculator/rcalculator.component';
+import { ViewgymComponent } from './viewgym/viewgym.component';
+import { HttpClientModule } from '@angular/common/http';
+import { InsertgymComponent } from './insertgym/insertgym.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,8 @@ import { RcalculatorComponent } from './rcalculator/rcalculator.component';
     RformsComponent,
     ListViewComponent,
     RcalculatorComponent,
+    ViewgymComponent,
+    InsertgymComponent,
    
   ],
   imports: [
@@ -38,6 +43,7 @@ import { RcalculatorComponent } from './rcalculator/rcalculator.component';
     FormsModule,
     NgbModule,
     ReactiveFormsModule,
+    HttpClientModule,
   
   ],
   providers: [

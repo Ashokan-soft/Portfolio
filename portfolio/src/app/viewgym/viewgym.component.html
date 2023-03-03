@@ -1,0 +1,129 @@
+
+
+<br>
+<br>
+
+<div class="container">
+
+
+
+    <form  [formGroup]="AnswerForm">
+        
+        
+        <div class="row">
+            <div class="col">
+   
+            </div>
+            <div class="col">
+   
+            </div>
+            <h6>Enter Gym Id Here</h6>
+            <div class="col">
+            
+            <!-- <label for="" class="form-label">Gym Id</label> -->
+                   
+               <input type="text" class="form-control" formControlName="GYM_ID" placeholder="Enter Gym Id Number">
+   
+               <small class="text-danger" *ngIf="viewSubmitted && AnswerForm.controls['GYM_ID'].errors?.required">Give
+                   gym_Id value in 1-9 </small>
+               <small class="text-danger" *ngIf="viewSubmitted && AnswerForm.controls['GYM_ID'].errors?.maxlength">Single
+                   Digit only</small>
+            
+   
+   
+            </div>
+      
+                   
+                <div class="col">
+                    
+                    <button type="submit" class="btn btn-success " (click)="view()"><i class="bi bi-search"></i> View</button>
+
+                  
+   
+               </div>
+            
+               <div class="col">
+                <button type="submit" class="btn btn-primary " routerLink="/insertgym" >Go To Data Entry Page</button>
+
+               </div>
+              
+        </div>
+    </form>
+   
+   
+
+        
+
+
+ <!-- </div> -->
+<br>
+
+    <!-- ----------------------------------------------- -->
+    <!-- <div class="row">
+        <div class="col text-dark">gym_id</div>
+        <div class="col text-dark">Bank_Id</div>
+        <div class="col text-dark" >AccountNO</div>
+        <div class="col text-dark">BankName</div>
+        <div class="col text-dark">IFSC Code</div>
+        <div class="col text-dark">Branch</div>
+        <div class="col text-dark">Type</div>
+        <div class="col text-dark">Credit</div>
+    </div>
+    <div class="row" *ngFor="let x of view1 ">
+
+        <div class="col">{{x.gymId}}</div>
+        <div class="col">{{x.bankId}}</div>
+        <div class="col">{{x.accountNo}}</div>
+        <div class="col">{{x.bankName}}</div>
+        <div class="col">{{x.ifscCode}}</div>
+        <div class="col">{{x.branch}}</div>
+        <div class="col">{{x.accountType}}</div>
+        <div class="col">{{x.createdBy}}</div>
+
+    </div> -->
+
+
+        
+
+
+<div class="tableOver">
+
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+
+              
+                <th>gym_id</th>
+                <th>Bank_Id</th>
+                <th>AccountNO</th>
+                <th>BankName</th>
+                <th>IFSC Code</th>
+                <th>Branch</th>
+                <th>Type</th>
+                <th>Credit</th>
+            </tr>
+
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let x of view1 ">
+
+                    <td>{{x.gymId}}</td>
+
+                    <td>{{x.bankId}}</td>
+                    <td>{{x.accountNo}}</td>
+                    <td>{{x.bankName}}</td>
+                    <td>{{x.ifscCode}}</td>
+                    <td>{{x.branch}}</td>
+                    <td>{{x.accountType}}</td>
+                    <td>{{x.createdBy}}</td>
+
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</div>
+
