@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RcalculatorComponent } from './rcalculator/rcalculator.component';
 import { RformsComponent } from './rforms/rforms.component';
+import { TipsComponent } from './tips/tips.component';
 import { ViewgymComponent } from './viewgym/viewgym.component';
 import { WorksComponent } from './works/works.component';
 
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path:'Rcalculator',component:RcalculatorComponent},
   {path:'viewgym',component:ViewgymComponent},
   {path:'insertgym',component:InsertgymComponent},
+  {path:'tips',component:TipsComponent},
 ];
 
 @NgModule({

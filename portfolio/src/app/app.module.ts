@@ -19,6 +19,7 @@ import { RcalculatorComponent } from './rcalculator/rcalculator.component';
 import { ViewgymComponent } from './viewgym/viewgym.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InsertgymComponent } from './insertgym/insertgym.component';
+import { TipsComponent } from './tips/tips.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { InsertgymComponent } from './insertgym/insertgym.component';
     RcalculatorComponent,
     ViewgymComponent,
     InsertgymComponent,
+    TipsComponent,
    
   ],
   imports: [

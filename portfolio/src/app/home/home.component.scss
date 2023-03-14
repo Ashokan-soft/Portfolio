@@ -1,3 +1,164 @@
 .thought1{
 text-align: justify;
 }
+
+img {
+    animation: Shake 10s linear infinite;
+}
+  
+/*Using keyframes for shaking an image*/
+@keyframes Shake {
+    0% {
+        transform: rotate(2deg);
+    }
+  
+    25% {
+        transform: rotate(-2deg);
+    }
+  
+    50% {
+        transform: rotate(3deg);
+    }
+  
+    75% {
+        transform: rotate(-2deg);
+    }
+  
+    100% {
+        transform: rotate(2deg);
+    }
+}
+
+
+
+.container{
+    color: rgb(229, 219, 219);
+}
+.workText{
+    color: aqua;
+}
+
+i{
+    // margin: 5px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    // border: solid 1px aqua;
+    padding: 10px;
+    color: aqua; 
+}
+i:hover{
+    // border: 1px solid aqua;
+    // padding: 10px;
+    font-size: 30px;
+    border-radius: 13px;
+    background-color: aqua;
+    transition-duration: 1s;
+//    zoom: 120%;
+color: rgb(14, 12, 31); 
+}
+
+
+.cvbtn{
+
+    border-radius: 25px;
+    // color: aqua;
+    color: rgb(14, 12, 31); 
+    background-color: aqua;
+
+}
+
+
+// ---------------------------------------------------
+
+
+
+// ======================================Auto Chenge text 
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+//   background: #343F4F;
+}
+.wrapper{
+  display: flex;
+}
+.wrapper .static-txt{
+  color: #fff;
+//   font-size: 60px;
+//   font-weight: 400;
+}
+.wrapper .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color:aqua;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+//   background: rgb(26, 26, 42);
+
+  border-left: 30px solid aqua;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+
+// -------------------------
+// * {
+//   padding: 0;
+//   margin: 0;
+  
+// }
+// .container {
+//     width: 95%;
+//     max-width: 1160px;
+//     margin: auto;
+// }
+// .animated-heading {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     height: 100vh;
+// }
+.flowtext {
+    color: aqua;
+    font-weight: 500;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+span#words {
+    font-weight: bolder;
+}
