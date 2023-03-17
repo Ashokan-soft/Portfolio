@@ -1,98 +1,164 @@
 .flip-card-back {
-    // background-color: rgb(55, 58, 60);
-    // color: white;
-    // transform: rotateY(180deg);
-    // border-radius: 20px;
-    // border: solid 1px black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    // width: 300px;
-    height: 100%;
-    background: #333;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transform: rotateY(180deg);
-  }
-  .flip-card-front {
-    // background-color: #222226;
-    // color: rgb(242, 234, 234);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    // width: 300px;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-    // zoom: 120%;
+  // background-color: rgb(55, 58, 60);
+  // color: white;
+  // transform: rotateY(180deg);
+  // border-radius: 20px;
+  // border: solid 1px black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // width: 300px;
+  height: 100%;
+  // background: #6c6ea9dc;
+  background: rgba(87, 89, 123, 0.447);
 
-  }
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    // width: 300px;
-    height: 100%;
-    // margin:10%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-  }
-  .flip-card:hover .flip-card-inner {
-    // zoom: 110%;
-    transform: rotateY(180deg);
-  }
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    // width: 300px;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
-  .flip-card {
-    background-color: transparent;
-    // width: 275px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+
+.flip-card-front {
+  // background-color: #222226;
+  // color: rgb(242, 234, 234);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // width: 300px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  // zoom: 120%;
+
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  // width: 300px;
+  height: 100%;
+  // margin:10%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card:hover .flip-card-inner {
+  // zoom: 110%;
+  transform: rotateY(180deg);
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  // width: 300px;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card {
+  background-color: transparent;
+  // width: 275px;
 
   height: 250px;
-    text-align: center;
-    align-items: center;
-    justify-items: center;
-  
-    border: 1px solid #f1f1f1;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
-    margin: 2%;
-   
-  }
-  .filp-card-back-inside{
-   
-    margin-top: 10%;
-    padding: 2%;
-    
-    // background-color: ;
-    width: 100%;
-    // height: 150px;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-    
-    // width:100%;
-    // width: 300px;
-    // object-fit: cover;
+  text-align: center;
+  align-items: center;
+  justify-items: center;
 
-    background: linear-gradient(45deg, #0015fe,#000000);
-    color: #f1f1f1;
-    transform-style: preserve-3d;
-    // background: linear-gradient(45deg, #FE0061,#FFEB3B);
-    transform: translateZ(100px);
-    // align-items: center;
+
+
+  // border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+  margin: 2%;
+
+}
+
+.filp-card-back-inside {
+
+  margin-top: 10%;
+  padding: 2%;
+
+  // background-color: ;
+  width: 100%;
+  // height: 150px;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+
+  // width:100%;
+  // width: 300px;
+  // object-fit: cover;
+
+  background: linear-gradient(45deg, #16eff331, #1d444a5b);
+  border: solid 1px aqua;
+  box-shadow: 0 4px 8px 0 rgba(93, 194, 238, 0.672), 0 6px 20px 0 rgba(40, 188, 229, 0.695);
+
+  color: #f1f1f1;
+  font-family: "Roboto";
+  transform-style: preserve-3d;
+  // background: linear-gradient(45deg, #FE0061,#FFEB3B);
+  transform: translateZ(100px);
+  // align-items: center;
+}
+
+// .cardd{
+//   align-items:center;
+//   text-align: center;
+
+// }
+// .col-sm-12{
+//   align-items: center;
+//   // width: 600px;
+// }
+
+.btn {
+  background-color: transparent;
+  border: aqua solid 1px;
+
+  color: rgb(9, 241, 241);
+  box-shadow: 1000%;
+}
+
+.btn:hover {
+
+  background-color: aqua;
+  color: black;
+}
+
+.titletxt {
+  // box-shadow: 0 4px 8px 0 rgba(93, 194, 238, 0.672), 0 6px 20px 0 rgba(40, 188, 229, 0.695);
+  // border: solid aqua 1px;
+  // text-shadow: 0 0 3px #00d0ff, 0 0 5px #00f2ff;
+
+  text-transform: uppercase;
+  background-image: linear-gradient(-225deg,
+      #155557 0%,
+      #093d3d 29%,
+      #13fffb 67%,
+      #00ddff 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-emphasis-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  font-size: 20px;
+  font-size: bold;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
   }
-  // .cardd{
-  //   align-items:center;
-  //   text-align: center;
-    
-  // }
-  // .col-sm-12{
-  //   align-items: center;
-  //   // width: 600px;
-  // }
+
+
+}

@@ -4,6 +4,8 @@ import { DOCUMENT } from '@angular/common';
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class ScriptCheckService {
 
   constructor(

@@ -20,6 +20,8 @@ import { ViewgymComponent } from './viewgym/viewgym.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InsertgymComponent } from './insertgym/insertgym.component';
 import { TipsComponent } from './tips/tips.component';
+import { ScripttipsComponent } from './scripttips/scripttips.component';
+import { BetaComponent } from './beta/beta.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { TipsComponent } from './tips/tips.component';
     ViewgymComponent,
     InsertgymComponent,
     TipsComponent,
+    ScripttipsComponent,
+    BetaComponent,
    
   ],
   imports: [

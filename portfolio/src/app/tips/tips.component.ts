@@ -9,13 +9,19 @@ const SCRIPT_PATH = '/assets/tipScript.js';
   styleUrls: ['./tips.component.scss']
 })
 export class TipsComponent implements OnInit {
+
+
+
     
   constructor(
     private renderer: Renderer2,
-    private scriptService: ScriptCheckService
+    private scriptService: ScriptCheckService,
   ) { }
 
-  ngOnInit(): void {const scriptElement = this.scriptService.loadJsScript(this.renderer, SCRIPT_PATH);  
+  ngOnInit(): void {const scriptElement = this.scriptService.loadJsScript(this.renderer, SCRIPT_PATH); 
+    
+   
+
   }
     
 }

@@ -1,165 +1,74 @@
-//******************************************************
-// Like it if you like it :) Thank you 
-//******************************************************
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
-
-.container {
-//   height: 100vh;
-//   display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center; 
-//   background: #010615;
-  color: white;
-  font-family: 'Poppins', sans-serif;
+canvas {
+  position: absolute;
+  // top: 0;
+  left: 0;
+  opacity: 70%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(8, 5, 27);
+   width: 100%;
+   height:109%;
 }
 
-.single-card {
+.container{
   position: relative;
-  width: 300px;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  margin: 40px;
-  transition: all 0.5s;
-  background: #010615;
-  
-  &:hover {
-    height: 400px;
-    
-    .content {
-       opacity: 1;
-    }
-    
-    .card-img {
-      
-        .img-tag {
-        opacity: 1;
-      }
-    }
-  }
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: white;
-    z-index: -1;
+  // top: 102px;
 
-background: linear-gradient(45deg, rgba(255,5,172,1) 0%, rgba(255,5,172,1) 18%, rgba(0,255,255,1) 100%); /* w3c */
-  }
-  
-  &::after {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: white;
-    z-index: -2;
-    filter: blur(40px);
-    background: linear-gradient(45deg, rgba(255,5,172,1) 0%, rgba(255,5,172,1) 18%, rgba(0,255,255,1) 100%); /* w3c */
-  }
-  
-  .card-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    box-sizing:  border-box;
-    
-    .img-tag {
-      max-width: 100%;
-      opacity: 0.1;
-      transition: 0.5s;
-      height: 280px;
-    }
-  }
-  
-  .content {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: 0;
-    transition: 0.5s;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    .title {
-      font-size: 28px;
-      line-height: 10px;
-    }
-  }
+  font-family: "Roboto";
+  // font-size: clamp(1em, 5vw, 4em);
+  // letter-spacing: 1.5em;
+  // font-size: 18px;
+  // box-sizing: border-box;
+  // color: hsla(210deg, 100%, 100%, 1);
+  // color: black;
+  // font-weight: 100;
+  // text-align: center;
+  // align-items: center;
 }
 
 
-
-
-
-// -------------------------------------------------------
-.neonText {
-    color: #fff;
-    text-shadow:
-      0 0 5px #fff,
-      0 0 10px #fff,
-      0 0 20px #fff,
-      0 0 40px #0ff,
-      0 0 80px #0ff,
-      0 0 90px #0ff,
-      0 0 100px #0ff,
-      0 0 150px #0ff;
-  }
+.card{
+  background-color: rgba(87, 89, 123, 0.447);
+  text-align: center;
+  margin: 2px;
   
-  .neonText {
-    // font-size: 4.2rem;
-    animation: flicker 1.5s infinite alternate;   
-    font-family: "Helvetica Neue", sans-serif;  
-    // text-transform: uppercase;
-    // background-color: #010a01;
-    font-weight: 400;
-  }
+}
+
+.card:hover{
+  border: solid 2px aqua;
+
+    // box-shadow: 10px 10px rgb(4, 188, 249);
+  box-shadow: 0 4px 8px 0 rgba(93, 194, 238, 0.541), 0 6px 20px 0 rgba(40, 188, 229, 0.531);
+  text-align: center;
+
+}
+
+i{
+  color: aqua;
+  text-align: center;
+  font-size: 300%;
+  // padding: 1%;
+ 
   
-  /* Flickering animation */
-  @keyframes flicker {
-      
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+ 
+}
+button{
+  background-color:transparent;
+  border: aqua solid 1px;
   
-      
-            text-shadow:
-              0 0 5px #fff,
-              0 0 10px #fff,
-              0 0 20px #fff,
-              0 0 40px #0ff,
-              0 0 80px #0ff,
-              0 0 90px #0ff,
-              0 0 100px #0ff,
-              0 0 150px #0ff;
-
-    
-    }
-    
-    20%, 24%, 55% {        
-        text-shadow: none;
-    }    
-  }
+  color: rgb(9, 241, 241); 
+  box-shadow: 1000%;
+  // padding: 1%;
+  margin: 10%;
   
-  
+}
+button:hover{
 
-
-
-// -------------------------------
-
-
-
+  background-color: aqua;
+  color: black;
+}
+p{
+  text-align:justify;
+  padding: 1%;
+}

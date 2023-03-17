@@ -9,8 +9,13 @@ export class ProfileComponent {
 
 iToggled:boolean=false
 
-togglMenu(){
+show:any 
 
+togglMenu(){}
+
+ChangeButtoncolor(x:any){
+
+   this.show=x
 }
 
 

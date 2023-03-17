@@ -2,7 +2,7 @@
 <!-- <div class="container-fluid"> -->
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+<nav class="navbar navbar-expand-lg nav-color ">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="/assets/nav icon/LOGObrand.png"style="width:150px;" alt=""></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,21 +11,21 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
         <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/home">Home</a>
+          <a class="nav-link"  href="#" routerLink="/home"[ngClass]="{'bglock':show == 'home'}"  (click)="ChangeButtoncolor('home')">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/about">About</a>
+          <a class="nav-link" href="#" routerLink="/about" [ngClass]="{'bglock':show == 'about'}"  (click)="ChangeButtoncolor('about')">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"routerLink="/works" >
+          <a class="nav-link" href="#"routerLink="/works" [ngClass]="{'bglock':show == 'works'}"  (click)="ChangeButtoncolor('works')">
             Works
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/contact">Contact me</a>
+          <a class="nav-link" href="#" routerLink="/contact"[ngClass]="{'bglock':show == 'contact'}"  (click)="ChangeButtoncolor('contact')">Contact me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/tips">A Tips</a>
+          <a class="nav-link" href="#" routerLink="/tips"[ngClass]="{'bglock':show == 'tips'}"  (click)="ChangeButtoncolor('tips')">A Tips</a>
         </li>
       </ul>
      
