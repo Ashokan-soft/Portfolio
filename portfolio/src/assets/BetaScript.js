@@ -5,7 +5,7 @@ function reOrder() {
   var mq = window.matchMedia("(min-width: 992px)");
   if (mq.matches) {
     $('.right-child').addClass('customm');
-    $('.right-child h2').text('Scroll')
+    // $('.right-child h2').text('Then do this')
     var scroll = $(window).scrollTop(),
       topContent = $('.one').position().top - 25,
       sectionHeight = $('.left').height(),

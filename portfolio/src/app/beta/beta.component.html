@@ -1,21 +1,80 @@
-<header>
+<header class="text-center">
+  <br>
+  <br>
+  <h2>Giving PDF <b style="color: aqua;">Download</b> Option</h2>
 </header>
 <div class="container">
   <section class="one clearfix">
       <div class="left">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div class="container">
+
+      <P class="text-center" style="color:white; font-size: larger;"><i class="bi bi-arrow-down-square"></i>  
+        INSTALL</P>
+
+      <p>$ open CMD and locate your Path</p>
+      <p>$ install your file saver package using</p>
+      <p style="background-color: black;">$ npm install file-saver</p>
+
+    </div>
+    <div class="container">
+
+      <P class="text-center" style="color:white; font-size: larger;"><i class="bi bi-arrow-90deg-down"></i>
+        Imports <b style="color:aqua;">    &   </b>declaration</P>  
+        
+        <p> # from .ts page <br>
+         
+          Not inside of class it must be, below imports codes:<br></p>
+
+
+  <p>> declare var require: any <br>
+
+  > const FileSaver = require('file-saver');</p>
+
+    </div>
+    <div class="container">
+      <P class="text-center" style="color:white; font-size: larger;"><i class="bi bi-arrow-90deg-down"></i>
+        Function <b style="color:aqua;">    &   </b>Adding</P>  
+
+<p>
+
+<!-- downloadPdf() { const pdfUrl = './assets/sample.pdf'; const pdfName = 'your_pdf_file'; FileSaver.saveAs(pdfUrl, pdfName);} -->
+Create function
+in ts page inside of class
+
+</p>
+    </div>
+    <!-- <div  class="container"> -->
+      <!-- <span> downloadPdf() {"</span>
+
+       <p>  downloadPdf() { <br>
+        const pdfUrl = './assets/sample.pdf';<br>
+        const pdfName = 'your_pdf_file';<br>
+        FileSaver.saveAs(pdfUrl, pdfName);<br>
+        }<br></p>  -->
+
+    <!-- </div> -->
   </div>
   <div class="right">
     <div class="right-child">
-      <h2>Scroll</h2>
-     
+      <h2><i class="bi bi-caret-left-fill"></i>Do This </h2>
+    
     </div>
   </div>
   </section>
 
-  <div class="bottom">
+  <div class="container bottom"[innerHTML]="htmlString">
+
   </div>
+  <footer class="container footer">
+    <p>Reference Link
+
+      <br>
+      Some annother ways refer this link
+      </p>
+  
+  <a  href="https://www.freakyjolly.com/angular-7-8-9-download-pdf-files-in-browser-instead-of-opening-in-new-tab-quick-solution/">
+  
+    GO TO REFERENCE SITE
+  </a>
+  </footer>
 </div>

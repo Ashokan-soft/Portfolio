@@ -1,17 +1,25 @@
 *{
-    box-sizing:border-box;
+  font-family: "Roboto";
   }
-  html, body{
-    margin:0;
-  }
+  // html, body{
+  //   margin:0;
+  // }
   header{
     width:100%;
     height:100px;
-    background:#2e446d;
+
+
+    background-color: rgba(87, 89, 123, 0.447);
+  // border: aqua solid 1px;
+
+  // color: rgb(9, 241, 241);
+
+    // box-shadow: 10px 10px rgb(4, 188, 249);
+  // box-shadow: 0 4px 8px 0 rgba(93, 194, 238, 0.541), 0 6px 20px 0 rgba(40, 188, 229, 0.531);  
   }
   .container{
     height:100%;
-    background:#b3c1da;
+    // background:#141dc3c2;
     width:992px;
     margin:0 auto;
     padding:25px;
@@ -31,7 +39,20 @@
     div{
       width:100%;
       height:200px;
-      background:#ccd9f1;
+      background-color: rgba(87, 89, 123, 0.447);
+      // border: aqua solid 1px;
+    
+      // color: rgb(9, 241, 241);
+      margin-bottom:25px;
+      border-radius:4px;
+    }
+    div:hover{
+      width:100%;
+      height:200px;
+      background-color: rgba(87, 89, 123, 0.447);
+      border: aqua solid 1px;
+      box-shadow: 0 4px 8px 0 rgba(93, 194, 238, 0.541), 0 6px 20px 0 rgba(40, 188, 229, 0.531);  
+      // color: rgb(9, 241, 241);
       margin-bottom:25px;
       border-radius:4px;
     }
@@ -41,13 +62,13 @@
     float:right;
   }
   .right-child{
-    background:#8da8d0;
+    // background:#0c1e3744;
     display:block;
     float:right;
     width:458px;
     padding:10px;
     text-align:center;
-    color:white;
+    color:aqua;
     border-radius:4px;
     h2{
       font-size:38px;
@@ -63,8 +84,8 @@
   }
   .bottom{
     width:100%;
-    height:900px;
-    background:#8698b9;
+    height:400px;
+    background:#051126;
   }
   
   @media(max-width:992px){
@@ -80,4 +101,9 @@
         width:100%;
       }
     }
+  }
+  .footer{
+    background-color: rgba(17, 245, 245, 0.203);
+    width: 100%;
+    height:150px;
   }
