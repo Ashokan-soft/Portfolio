@@ -11,21 +11,21 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
         <li class="nav-item">
-          <a class="nav-link"  href="#" routerLink="/home"[ngClass]="{'bglock':show == 'home'}"  (click)="ChangeButtoncolor('home')">Home</a>
+          <a class="nav-link"  href="#" routerLink="/home"[routerLinkActive]="['bglock']" >Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/about" [ngClass]="{'bglock':show == 'about'}"  (click)="ChangeButtoncolor('about')">About</a>
+          <a class="nav-link" href="#" routerLink="/about" [routerLinkActive]="['bglock']">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"routerLink="/works" [ngClass]="{'bglock':show == 'works'}"  (click)="ChangeButtoncolor('works')">
+          <a class="nav-link" href="#"routerLink="/works"[routerLinkActive]="['bglock']" >
             Works
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/contact"[ngClass]="{'bglock':show == 'contact'}"  (click)="ChangeButtoncolor('contact')">Contact me</a>
+          <a class="nav-link" href="#" routerLink="/contact" [routerLinkActive]="['bglock']">Contact me</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/tips"[ngClass]="{'bglock':show == 'tips'}"  (click)="ChangeButtoncolor('tips')">A Tips</a>
+          <a class="nav-link" href="#" routerLink="/tips" [routerLinkActive]="['bglock']">A Tips</a>
         </li>
       </ul>
      

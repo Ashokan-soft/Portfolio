@@ -21,6 +21,6 @@ function reOrder() {
     }
   } else {
     $('.right-child').removeClass('customm posAbs posFix');
-    $('.right-child h2').text("fixed")
+    // $('.right-child h2').text("fixed")
   }
 }
