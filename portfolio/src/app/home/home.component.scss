@@ -4,6 +4,7 @@
 
 @media only screen and (max-width:768px)
 {
+
     .thought1{
         text-align: justify;
         }
@@ -131,6 +132,16 @@
 
 @media only screen and (min-width:769px)
 {
+
+ h1:hover   {
+    transform: translate3d(0, -10px, 22px);
+    color: rgb(18, 220, 220);
+    transition-duration: 0.8s;
+    cursor: pointer;
+    text-decoration:double ;
+ }
+
+
     .thought1{
         text-align: justify;
         }

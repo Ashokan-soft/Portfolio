@@ -1,11 +1,82 @@
-.card:hover{
+
+// @media only screen and (min-width:769px)
+// {
+// }
+
+
+  .card:hover{
     cursor: pointer;
 
 }
-video{
-    margin: 10%;
-    width: 100%;
-    align-items: center;
-    padding-right: 20%;
-    
+h2:hover{
+  transform: translate3d(0, -10px, 22px);
+  color: #02f2ff;
+  // cursor:pointer;
+  cursor: pointer;
 }
+
+.card{
+    background-color: rgba(87, 89, 123, 0.447);
+    text-align: center;
+    margin: 2px;
+    height: 100%;
+    // margin-bottom: 10px;
+    // padding-bottom: 10px;
+    
+  }
+  
+  .card:hover{
+    border: solid 2px aqua;
+  
+      // box-shadow: 10px 10px rgb(4, 188, 249);
+    box-shadow: 0 4px 8px 0 rgba(93, 194, 238, 0.541), 0 6px 20px 0 rgba(40, 188, 229, 0.531);
+    text-align: center;
+    // margin: 2%;
+    // padding: 2%;
+    // zoom: 150%;
+
+    font-size: larger;
+    // transition: ;
+    transition-duration: 0.5s;
+    // transform-style: preserve-3d;
+    // transition-delay: 1s;
+
+    transform: translate3d(0, -10px, 22px);
+    // color: #ff0266;
+  
+  }
+  button{
+    background-color:transparent;
+    border: aqua solid 1px;
+    
+    color: rgb(9, 241, 241); 
+    box-shadow: 1000%;
+    // padding: 1%;
+    margin: 10%;
+    
+  }
+  button:hover{
+  
+    background-color: aqua;
+    color: black;
+  }
+  .icon{
+
+    color: aqua;
+    text-align: center;
+    font-size: 200%;
+  }
+  .Insideicon{
+    color: aqua;
+    text-align: center;
+    // font-size: 200%;
+  }
+  .AllColoum{
+    padding: 5px;
+
+  }
+
+
+// mobile-------------------------------------------------------------
+
+ 
