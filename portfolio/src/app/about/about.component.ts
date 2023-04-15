@@ -11,6 +11,8 @@ const SCRIPT_PATH = '/assets/About.js';
 })
 export class AboutComponent implements OnInit {
 
+
+x:any='90%'
   
     
   constructor(
