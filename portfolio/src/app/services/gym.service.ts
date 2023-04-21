@@ -25,4 +25,5 @@ export class GymService {
     return this.http.post(url,input)
 
   }
+
 }
